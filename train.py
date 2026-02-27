@@ -51,7 +51,7 @@ X_scaled = scaler.fit_transform(X)
 # ==============================
 # Train-Test Split
 # ==============================
-test=0.3
+test=0.2
 X_train, X_test, y_train, y_test = train_test_split(
     X_scaled, y, test_size=test, random_state=42
 )
