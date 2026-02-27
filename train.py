@@ -6,7 +6,7 @@ import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression 
-# from sklearn.linear_model import Lasso
+from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error, r2_score
 
 
@@ -41,7 +41,7 @@ y = data["quality"]
 # ==============================
 # Preprocessing (Scaling)
 # ==============================
-scaler = StandardScaler()
+scaler = MinMaxScaler()
 X_scaled = scaler.fit_transform(X)
 
 
