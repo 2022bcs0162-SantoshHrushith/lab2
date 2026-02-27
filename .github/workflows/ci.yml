@@ -30,8 +30,8 @@ jobs:
       - name: Add metrics to Job Summary
         run: |
           echo "## ML Experiment Results" >> $GITHUB_STEP_SUMMARY
-          echo "Name: Santosh Hrushith" >> $GITHUB_STEP_SUMMARY
-          echo "Roll No: YOUR_ROLL_NO" >> $GITHUB_STEP_SUMMARY
+          echo "Name: Santosh Hrushith Yelamanchili" >> $GITHUB_STEP_SUMMARY
+          echo "Roll No: 2022BCS0162" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Evaluation Metrics" >> $GITHUB_STEP_SUMMARY
           cat outputs/results.json >> $GITHUB_STEP_SUMMARY
