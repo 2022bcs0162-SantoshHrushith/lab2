@@ -36,8 +36,8 @@ selected_features = [
 ]
 
 target = "quality"
-X = data[selected_features]
-# X = data.drop(target, axis=1)
+# X = data[selected_features]
+X = data.drop(target, axis=1)
 y = data[target]
 
 
@@ -107,7 +107,7 @@ joblib.dump(model, "outputs/model.pkl")
 # ==============================
 results = {
     "Model": modelName,
-    "Selected Features": selected_features,
+    "Selected Features": "All features",
     "Test Size": test,
     "MSE": mse,
     "R2 Score": r2
