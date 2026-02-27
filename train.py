@@ -81,8 +81,8 @@ r2 = r2_score(y_test, y_pred)
 # Print Metrics (for GitHub Actions logs)
 # ==============================
 print("===== Model Training Completed =====")
-print(f"Model: Lasso")
-print(f"Alpha: {alpha_value}")
+print(f"Model: Linear Regression")
+# print(f"Alpha: {alpha_value}")
 print(f"MSE: {mse}")
 print(f"R2 Score: {r2}")
 
