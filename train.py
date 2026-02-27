@@ -56,6 +56,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 # ==============================
 # Model Training
 # ==============================
+modelName = "Linear Regression"
 model = LinearRegression()
 
 # alpha_value = 0.1
@@ -81,7 +82,7 @@ r2 = r2_score(y_test, y_pred)
 # Print Metrics (for GitHub Actions logs)
 # ==============================
 print("===== Model Training Completed =====")
-print(f"Model: Linear Regression")
+print(f"Model: {modelName}")
 # print(f"Alpha: {alpha_value}")
 print(f"MSE: {mse}")
 print(f"R2 Score: {r2}")
@@ -97,8 +98,7 @@ joblib.dump(model, "outputs/model.pkl")
 # Save Evaluation Results
 # ==============================
 results = {
-    "Model": "Lasso",
-    "Alpha": alpha_value,
+    "Model": modelName,
     "Selected Features": selected_features,
     "Test Size": 0.2,
     "MSE": mse,
