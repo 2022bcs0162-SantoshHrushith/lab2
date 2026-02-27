@@ -8,6 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression 
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.ensemble import RandomForestRegressor
 
 
 # ==============================
@@ -50,7 +51,7 @@ X_scaled = scaler.fit_transform(X)
 # ==============================
 # Train-Test Split
 # ==============================
-test=0.3
+test=0.2
 X_train, X_test, y_train, y_test = train_test_split(
     X_scaled, y, test_size=test, random_state=42
 )
@@ -59,8 +60,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 # ==============================
 # Model Training
 # ==============================
-modelName = "Linear Regression"
-model = LinearRegression()
+modelName = "Random Forest"
+model = RandomForestRegressor(random_state=42)
 
 # alpha_value = 0.1
 # model = Lasso(alpha=alpha_value)
