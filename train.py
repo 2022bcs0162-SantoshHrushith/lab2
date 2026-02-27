@@ -34,8 +34,10 @@ selected_features = [
     'fixed acidity'
 ]
 
-X = data[selected_features]
-y = data["quality"]
+target = "quality"
+# X = data[selected_features]
+X = data.drop(target, axis=1)
+y = data[target]
 
 
 # ==============================
@@ -48,8 +50,9 @@ X_scaled = scaler.fit_transform(X)
 # ==============================
 # Train-Test Split
 # ==============================
+test=0.2
 X_train, X_test, y_train, y_test = train_test_split(
-    X_scaled, y, test_size=0.2, random_state=42
+    X_scaled, y, test_size=test, random_state=42
 )
 
 
@@ -99,8 +102,8 @@ joblib.dump(model, "outputs/model.pkl")
 # ==============================
 results = {
     "Model": modelName,
-    "Selected Features": selected_features,
-    "Test Size": 0.2,
+    "Selected Features": "All features",
+    "Test Size": test,
     "MSE": mse,
     "R2 Score": r2
 }
