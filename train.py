@@ -44,7 +44,7 @@ y = data[target]
 # ==============================
 # Preprocessing (Scaling)
 # ==============================
-scaler = MinMaxScaler()
+scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 
@@ -60,7 +60,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 # ==============================
 # Model Training
 # ==============================
-modelName = "Random Forest est=100 dep=15"
+modelName = "Random Forest est=50 dep=10"
 model = RandomForestRegressor(
     n_estimators=50,
     max_depth=10,
